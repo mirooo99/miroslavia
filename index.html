@@ -1,0 +1,874 @@
+<!DOCTYPE html><html lang="bg" prefix="og: https://ogp.me/ns#"><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="csrf-token" content="KzngkVoLW7W6UdrSTs2MqHpq4e3MdUq3eBICqDZc">
+    
+
+<title>Проверка на фирми по ЕГН | Единен граждански номер</title>
+<meta name="description" content="Проверка на фирма по ЕГН. Разберете дали дадено ЕГН фигурира като собственик, управител или съдружник във фирми и вижте основните данни за дружеството от публични регистри.">
+<meta property="og:url" content="https://egn.bg/egn/firms">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Проверка на фирми по ЕГН | Единен граждански номер">
+<meta property="og:description" content="Проверка на фирма по ЕГН. Разберете дали дадено ЕГН фигурира като собственик, управител или съдружник във фирми и вижте основните данни за дружеството от публични регистри">
+<meta property="og:image" content="images/firms.jpg">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta property="twitter:domain" content="egn.bg">
+<meta property="twitter:url" content="https://egn.bg/egn/firms">
+<meta name="twitter:title" content="Проверка на фирми по ЕГН | Единен граждански номер">
+<meta name="twitter:description" content="Проверка на фирма по ЕГН. Разберете дали дадено ЕГН фигурира като собственик, управител или съдружник във фирми и вижте основните данни за дружеството от публични регистри">
+<meta name="twitter:image" content="images/firms.jpg">
+<link rel="canonical" href="https://egn.bg/egn/firms">
+<script async="" src="js/matomo.js"></script><script type="application/ld+json">
+    {
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Проверка на фирми по ЕГН",
+  "url": "https://egn.bg/egn/firms",
+  "applicationCategory": "BusinessApplication",
+  "operatingSystem": "All",
+  "description": "Проверка на фирма по ЕГН. Разберете дали дадено ЕГН фигурира като собственик, управител или съдружник във фирми и вижте основните данни за дружеството от публични регистри.",
+  "inLanguage": "bg",
+  "creator": {
+    "@type": "Organization",
+    "name": "Единен граждански номер",
+    "url": "https://egn.bg"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Единен граждански номер",
+    "url": "https://egn.bg"
+  },
+  "keywords": "търсене фирми по ЕГН, фирми по ЕГН, фирмен регистър, търсене по ЕГН",
+  "featureList": [
+    "Намира регистрирани фирми по въведено ЕГН",
+    "Показва ЕИК, наименование, адрес и основна дейност",
+    "Препращане към официални публични регистри (Търговски регистър, НОИ и т.н.)",
+    "Експорт на резултати (CSV/JSON) за по-нататъшна обработка"
+  ],
+  "isAccessibleForFree": true,
+  "privacyPolicy": "https://egn.bg/privacy",
+  "license": "https://creativecommons.org/licenses/by/4.0/"
+}
+
+</script>
+        <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+    <link rel="manifest" href="site.webmanifest">
+    
+    <link rel="stylesheet" href="css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
+ 
+    <link rel="stylesheet" href="css/bootstrap.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link rel="stylesheet" href="css/style.css">
+
+    <script src="js/egn-validate.js"></script>
+
+
+    <!-- Matomo -->
+    <script>
+        var _paq = window._paq = window._paq || [];
+    /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+    _paq.push(['trackPageView']);
+    _paq.push(['enableLinkTracking']);
+    (function() {
+        var u="//mtm.static.bg/";
+        _paq.push(['setTrackerUrl', u+'matomo.php']);
+        _paq.push(['setSiteId', '2']);
+        var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+        g.async=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
+    })();
+    </script>
+    <!-- End Matomo Code -->
+
+    <script async="" src="js/adsbygoogle.js"></script>
+</head>
+
+<body>
+    <header class="d-flex flex-wrap fixed-top justify-content-center mb-4 site-header mt-3">
+    <div class="container">
+        <nav class="navbar navbar-expand-lg navbar-light bg-white px-3 shadow-lg">
+            <a class="navbar-brand" href="https://egn.bg">
+                <img src="images/logo.svg" alt="Logo" class="d-inline-block align-text-top" style="width: 200px">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link " href="https://egn.bg">Проверка</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link " href="https://egn.bg/egn/gender">Пол по ЕГН</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link " href="https://egn.bg/egn/region">Регион по ЕГН</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="https://egn.bg/egn/firms">Фирми по ЕГН</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link " href="https://egn.bg/egn/generator">Генератор</a>
+                    </li>
+  
+                    <li class="nav-item">
+                        <a class="nav-link " href="https://egn.bg/history">История</a>
+                    </li>  
+         
+                    <li class="nav-item">
+                        <a class="nav-link " href="https://egn.bg/blog">Блог</a>
+                    </li>
+                              
+
+                    <li class="nav-item dropdown nav-item-language link-8 d-none d-lg-block">
+                        <button class="nav-link dropdown-toggle bg-transparent border-0" id="countriesDropdown" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Други държави
+                        </button>
+                        <ul class="dropdown-menu dropdown-menu-end language-dropdown-menu" aria-labelledby="countriesDropdown">
+                            <li>
+                                <a class="dropdown-item" href="https://verificarecnp.ro/" rel="noopener" lang="ro" hreflang="ro">
+                                    <img src="images/RO.svg" alt="" width="30" height="20" loading="lazy">
+                                    <span>Romanian CNP</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="https://emso.si/" rel="noopener" lang="si" hreflang="si">
+                                    <img src="images/SI.svg" alt="" width="30" height="20" loading="lazy">
+                                    <span>Slovenian EMSO</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+
+            </div>
+        </nav>
+    </div>
+</header>
+
+        <main>
+    <section class="tool-header-box">
+<div class="container py-5 container-mobile">
+    <div class="row align-items-center">
+        <div class="col-lg-7 text-center text-lg-start">
+            <h1 class="fs-5rem fw-bold lh-1 text-body-emphasis mb-3">Проверка на фирми по ЕГН</h1>
+            <p class="col-lg-10 fs-4">Проверете дали дадено ЕГН фигурира като собственик, управител, съдружник или представляващ в търговски дружества.
+            Справката използва данни от публични регистри и показва свързаните фирми, когато такава информация е налична.</p>
+            <div class="home-dev-proof">
+                <span><i class="fas fa-check-circle"></i> Проверка по ЕГН</span>
+                <span><i class="fas fa-check-circle"></i> Собственици и управители</span>
+                <span><i class="fas fa-check-circle"></i> Данни от публични регистри</span>
+            </div>
+        </div>
+            <div class="col-md-10 mx-auto col-lg-5">
+            <form class="tool-box shadow-lg" action="https://egn.bg/egn/firms" method="post" id="egn-firms">
+                <div class="form-floating mb-3">
+                    <input type="text" class="form-control rounded-0" name="egn" id="egn" placeholder="Въведете ЕГН" required="" autocomplete="off" maxlength="10" pattern="\d{10}" inputmode="numeric">
+                    <label for="value">ЕГН</label>
+                </div>
+                <button class="w-100 btn btn-lg btn-primary rounded-0" type="submit" id="submit-btn">
+                    <div class="spinner-border spinner-border-sm d-none" role="status">
+                        <span class="visually-hidden">Loading...</span>
+                    </div>
+                    <span id="text-span">Намери фирми</span>
+                </button>
+                <hr class="my-4">
+                <small class="text-body-secondary">Въведете ЕГН, за да проверите дали лицето участва като собственик, управител или съдружник във фирми от публичните
+                търговски регистри.</small>
+            </form>
+        </div>
+    </div>
+</div>
+</section>
+<div class="container" id="result-container">
+    <section class="tools mb-5 bg-white py-5">
+        <div class="d-flex justify-content-end mb-3 action-toolbar">
+        <button onclick="share()" class="btn btn-sm btn-outline-primary text-end"><i class="fas fa-share-alt"></i>
+            Сподели</button>
+        </div>
+        <h2>Намерени фирми</h2>
+        <div id="fallback" style="display:none; margin-top:15px;float:left;">
+            <a href="#" id="fb" rel="noreferrer" target="_blank" class="share-btn btn btn-sm btn-outline-success"><i class="fab fa-facebook-square"></i> Facebook</a>
+            <a href="#" id="viber" rel="noreferrer" class="share-btn btn btn-sm btn-outline-success"><i class="fab fa-viber"></i> Viber</a>
+            <a href="#" id="whatsapp" rel="noreferrer" target="_blank" class="share-btn btn btn-sm btn-outline-success"><i class="fab fa-whatsapp-square"></i> WhatsApp</a>
+            <button onclick="copyLink()" rel="noreferrer" class="share-btn btn btn-sm btn-outline-success"><i class="fas fa-copy"></i> Копирай линк</button>
+        </div>
+        <div id="test-result" class="fs-5 fw-bold -mt-25 text-center"></div>
+        <div class="row mt-4">
+            <div class="col text-center">
+                <a href="#" class="got-new-test"><i class="fas fa-sync-alt"></i> Нова проверка</a>
+            </div>
+        </div>
+    </section>
+</div>
+<section class="tools egn-buttons">
+    <div class="container">
+        <div class="row mb-3">
+            <div class="col-12 text-center">
+                <h2 class="h3">Инструменти за работа с ЕГН</h2>
+                <p class="text-muted small mb-0">Използвайте безплатните инструменти за проверка на ЕГН, генериране на валидни ЕГН, определяне на пол по ЕГН, регион по
+                ЕГН, търсене на фирми по ЕГН и анализ на статистически данни. Всички проверки се извършват онлайн, без регистрация и без
+                съхранение на въведените ЕГН.</p>
+            </div>
+        </div>
+
+        <div class="row row-cols-lg-3 row-cols-sm-1">
+            <div class="col">
+                <a href="https://egn.bg" class="tool-box-btn check-egn">
+                    <div class="tool-box-btn-body">
+                        <h3 class="fs-5 mb-1"><span><i class="fa-regular fa-circle-check"></i></span> Проверка на ЕГН</h3>
+                        <p class="small text-muted mb-2">Провери дали едно ЕГН е валидно и виж датата на раждане, пола и региона, кодирани в него.</p> 
+                            <button>Проверка на ЕГН <i class="fa-solid fa-arrow-up-long"></i></button>
+                    </div>
+                </a>
+            </div>
+
+            <div class="col">
+                <a href="https://egn.bg/egn/generator" class="tool-box-btn generate-egn">
+                    <div class="tool-box-btn-body">
+                            <h3 class="fs-5 mb-1"><span><i class="fa-solid fa-list-check"></i></span> ЕГН генератор</h3>
+                        <p class="small text-muted mb-2">Генерирай едно или повече валидни ЕГН по зададени дата на раждане, пол и регион или използвай случайни стойности.</p>
+                        <button>ЕГН генератор <i class="fa-solid fa-arrow-up-long"></i></button>
+                    </div>
+                </a>
+            </div>
+
+            <div class="col">
+                <a href="https://egn.bg/egn/firms" class="tool-box-btn firms-egn">
+                        <div class="tool-box-btn-body">
+                            <h3 class="fs-5 mb-1"><span><i class="fa-solid fa-building"></i></span> Фирми по ЕГН</h3>
+               
+                        <p class="small text-muted mb-2">Провери дали дадено ЕГН фигурира като управител, собственик или съдружник в публичните търговски регистри.</p>
+                        <button>Фирми по ЕГН <i class="fa-solid fa-arrow-up-long"></i></button>
+                    </div>
+                </a>
+            </div>
+
+            <div class="col">
+                <a href="https://egn.bg/egn/region" class="tool-box-btn region-egn">
+                    <div class="tool-box-btn-body">
+                        <h3 class="fs-5 mb-1"><span><i class="fa-solid fa-map-marker-alt"></i></span> Регион по ЕГН</h3>
+                        <p class="small text-muted mb-2">Определи административния регион и поредния номер на ЕГН според кода на мястото на издаване.</p>
+                        <button>Регион по ЕГН <i class="fa-solid fa-arrow-up-long"></i></button>
+                    </div>
+                </a>
+            </div>
+    
+
+            <div class="col">
+                <a href="https://egn.bg/egn/gender" class="tool-box-btn gender-egn">
+                    <div class="tool-box-btn-body">
+                        <h3 class="fs-5 mb-1"><span><i class="fa-solid fa-venus-mars"></i></span> Пол по ЕГН</h3>
+                        <p class="small text-muted mb-2">Разбери дали ЕГН принадлежи на мъж или жена според деветата цифра на номера.</p>
+                        <button>Пол по ЕГН <i class="fa-solid fa-arrow-up-long"></i></button>
+                    </div>
+                </a>
+            </div>
+
+            <div class="col">
+                <a href="https://egn.bg/egn/statistika" class="tool-box-btn api-egn">
+                    <div class="tool-box-btn-body">
+                        <h3 class="fs-5 mb-1"><span>
+                            <i class="fa-solid fa-chart-bar"></i>
+                        </span> Статистика</h3>
+                        <p class="small text-muted mb-2">Разгледай статистики за извършените проверки, валидните ЕГН и използването на инструментите.</p>
+                        <button>Статистика <i class="fa-solid fa-arrow-up-long"></i></button>
+                    </div>
+                </a>
+            </div>  
+        </div>
+    </div>
+</section>
+<section id="firm-check-details" class="py-5 bg-light">
+    <div class="container">
+
+        <h2 class="mb-4">Защо е Важна Справката за Фирми по ЕГН?</h2>
+
+        <p class="lead">
+            В дигиталната епоха, когато сключвате сделки, работите с нови доставчици или просто проверявате потенциален
+            партньор, <strong>прозрачността</strong> е от първостепенно значение. Нашият инструмент за <strong>проверка
+                на фирми по ЕГН</strong> дава възможност на всеки – от частни лица до бизнес анализатори – да получи
+            бърз преглед на бизнес ангажиментите на дадено физическо лице.
+        </p>
+
+        <h3 class="mt-4">Предимства на Директната Проверка с egn.bg</h3>
+        <p>
+            Вместо да пресявате сложните портали на държавните институции, ние Ви предоставяме изчистен и бърз достъп до
+            жизненоважна информация, базирана на Вашето търсене по Единен Граждански Номер:
+        </p>
+
+        <ul class="list-group list-group-flush mb-4">
+            <li class="list-group-item">
+                <strong>Актуалност (100% в Реално Време):</strong> Данните се извличат директно от <strong>Търговския
+                    Регистър</strong> при всяко търсене, което гарантира, че информацията е **най-новата налична** към
+                момента на проверката.
+            </li>
+            <li class="list-group-item">
+                <strong>Пълна Прозрачност:</strong> Открийте всички регистрирани **Търговци (ЕТ), ЕООД, ООД, АД** и
+                други юридически лица с нестопанска цел (ЮЛНЦ), в които лицето има участие или управленска позиция.
+            </li>
+            <li class="list-group-item">
+                <strong>Бързина и Удобство:</strong> Въвеждате само ЕГН и получавате резултат за секунди, без нужда от
+                регистрация, CAPTCHA кодове или допълнителни абонаменти.
+            </li>
+            <li class="list-group-item">
+                <strong>Сигурност и GDPR:</strong> Ние не съхраняваме и не обработваме въведените ЕГН. Справката е
+                напълно **анонимна** и съответства на изискванията за защита на личните данни.
+            </li>
+        </ul>
+
+        <h3 class="mt-4">За Кого е Полезен Този Инструмент?</h3>
+
+        <div class="row">
+            <div class="col-md-6">
+                <div class="card mb-3 shadow-sm h-100">
+                    <div class="card-body">
+                        <h5 class="card-title text-success">За Бизнес Партньори</h5>
+                        <p class="card-text">Преди сключване на договор или инвестиция, проверете дали съдружникът или
+                            управителят е обвързан с други активни или заличени фирми.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card mb-3 shadow-sm h-100">
+                    <div class="card-body">
+                        <h5 class="card-title text-success">За Проверка на Доверието</h5>
+                        <p class="card-text">Уверете се, че лицето, с което работите, няма необявени бизнес ангажименти
+                            или множество стари, неликвидирани фирми.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <h3 class="mt-4 border-top pt-4">Често Задавани Въпроси (FAQ)</h3>
+        <div class="accordion" id="faqFirmsAccordion">
+
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingOneFirm">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                        Каква е разликата между тази справка и справката в Търговския Регистър?
+                    </button>
+                </h2>
+                <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">
+                        Нашият инструмент е агрегатор. Той извлича същата публична информация, но я предоставя в
+                        по-удобен и директен формат, фокусиран върху търсенето по ЕГН, докато официалният регистър
+                        изисква по-специфични критерии за търсене.
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingTwoFirm">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                        Какви позиции на лицето във фирмите се показват?
+                    </button>
+                </h2>
+                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">
+                        Показват се всички роли, които са публично обявени в Търговския Регистър –
+                        управител/изпълнителен директор, собственик на капитал, съдружник, прокурист или член на
+                        контролен/управителен орган.
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingThreeFirm">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                        Законно ли е да проверявам ЕГН за бизнес връзки?
+                    </button>
+                </h2>
+                <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">
+                        Да, тъй като инструментът използва само публични данни, обявени в регистрите на Агенцията по
+                        вписванията. Всяко физическо лице, което е регистрирано като участник във фирма, приема, че тази
+                        информация е публична.
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+<script>
+    document.getElementById('egn-firms').addEventListener('submit', function(e) {
+    e.preventDefault();
+    _paq.push(['trackEvent', 'CheckFirms', 'start', '']);
+    const form = e.target;
+    const egn = form.egn.value.trim();
+    const containerDiv = document.getElementById('result-container'); 
+    const resultDiv = document.getElementById('test-result');
+    const action = form.getAttribute('action');
+    const token = document.querySelector('meta[name="csrf-token"]').getAttribute('content');
+
+    resultDiv.innerHTML = '';
+    
+    const submitBtn = document.getElementById('submit-btn');
+    submitBtn.querySelector('.spinner-border').classList.remove('d-none');
+    submitBtn.querySelector('#text-span').classList.add('d-none');
+    fetch(action, {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+            'Accept': 'application/json',
+            'X-CSRF-TOKEN': token
+        },
+        body: JSON.stringify({ egn: egn })
+    })
+    .then(res => {
+        if (res.status === 429) {
+            submitBtn.querySelector('.spinner-border').classList.add('d-none');
+            submitBtn.querySelector('#text-span').classList.remove('d-none');
+            containerDiv.style.display = 'block';
+            resultDiv.innerHTML = `<p class="text-danger">Изчакайте 1 минута преди следваща заявка.</p>`;
+            throw new Error('Too Many Attempts');
+        }
+        return res.json();
+    })
+    .then(data => {
+        submitBtn.querySelector('.spinner-border').classList.add('d-none');
+        submitBtn.querySelector('#text-span').classList.remove('d-none');
+        containerDiv.style.display = 'block';
+
+        if (data.status === false) {
+            _paq.push(['trackEvent', 'CheckFirms', 'end', data.error_type]);
+            resultDiv.innerHTML = `<p class="text-danger">${data.message}</p>`;
+        } else  if(data.status === true) {
+            form.reset();
+            document.getElementById('result-container').scrollIntoView({
+                behavior: 'smooth'
+            });
+
+            if (data.rows && data.rows.length > 0) {
+                _paq.push(['trackEvent', 'CheckFirms', 'end', 'success']);
+                const table = document.createElement('table');
+                table.classList.add('table-bordered', 'table', 'my-3');
+
+                const headerRow = document.createElement('tr');
+                ['Компания', 'ЕИК/Булстат'].forEach(text => {
+                    const th = document.createElement('th');
+                    th.textContent = text;
+                    headerRow.appendChild(th);
+                });
+                table.appendChild(headerRow);
+
+                const seenUic = new Set();
+                data.rows.forEach(innerArray => {
+                    innerArray.forEach(item => {
+
+                        if (seenUic.has(item.uic)) {
+                            return;
+                        }
+                        seenUic.add(item.uic);
+
+                        const row = document.createElement('tr');
+
+                        const tdName = document.createElement('td');
+                        tdName.textContent = item.companyFullName;
+                        row.appendChild(tdName);
+
+                        const link = document.createElement('a');
+                        link.href = `https://eik.bg/eik/${encodeURIComponent(item.uic)}`;
+                        link.target = "_blank";
+                        link.innerHTML = `${item.uic} <i class="fas fa-location-arrow"></i>`;
+
+                        const tdUic = document.createElement('td');
+                        tdUic.appendChild(link);
+                        row.appendChild(tdUic);
+
+                        table.appendChild(row);
+                    });
+                });
+
+                resultDiv.appendChild(table);
+            } else {
+                _paq.push(['trackEvent', 'CheckFirms', 'end', 'fail']);
+                resultDiv.textContent = 'Няма резултати';
+            }
+        } else {
+            resultDiv.innerHTML = '<p class="text-danger">Това ЕГН не изглежда правилно. Провери дали има 10 цифри и опитай пак..</p>';
+        }
+    })
+    .catch(err => {
+        if (err.message !== 'Too Many Attempts') {
+            resultDiv.innerHTML = '<p class="text-danger">Грешка при заявката.</p>';
+        }
+    });
+});
+
+</script>
+
+    </main>
+    <section class="container mb-5 newsletter-section">
+ <div class="newsletter-body">
+            <div class="p-3 text-center flex-fill text-center">    
+               <i class="fas fa-envelope-open-text" style="font-size: 80px;color:rgb(0,0,0)"></i>
+                <h4 class="fw-bold">Абонирай се за нашия бюлетин</h4>
+                <p class="text-body-secondary">Получавай най-новите статии и актуализации директно в пощата си.</p>
+      
+                <form method="POST" action="https://egn.bg/newsletter" id="newsletterForm" class="w-100" style="position: relative;max-width:600px;margin:auto;">
+                    <input type="hidden" name="_token" value="KzngkVoLW7W6UdrSTs2MqHpq4e3MdUq3eBICqDZc" autocomplete="off">                    <div class="input-group">
+                        <input type="email" name="email" class="form-control-lg rounded-0" placeholder="Твоят имейл" required="" style="width: 100%;"> 
+                        <button class="btn btn-primary btn-lg rounded-0" type="submit" style="position: absolute; right: 0; top: 0;">Запиши се</button>
+                    </div> 
+                    <div id="newsletter-message" style="margin-top:10px;"></div>
+                </form> 
+    </div> 
+ 
+    </div>
+</section>
+<div class="newsletter-overlay"></div>
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const form = document.getElementById('newsletterForm');
+      const msg = document.getElementById('newsletter-message');
+    
+      if (!form) return;
+    
+      form.addEventListener('submit', async function (e) {
+        e.preventDefault();
+    
+        const url = form.getAttribute('action');
+        const body = new URLSearchParams(new FormData(form));
+    
+        try {
+          const res = await fetch(url, {
+            method: 'POST',
+            headers: {
+              'Accept': 'application/json',
+              'X-Requested-With': 'XMLHttpRequest',
+              'Content-Type': 'application/x-www-form-urlencoded;charset=UTF-8'
+            },
+            body
+          });
+    
+          if (res.ok) {
+            const data = await res.json().catch(() => ({}));
+            msg.innerHTML = '<div class="alert alert-success" role="alert">' + (data.message || 'Успешно.') + '</div>';
+            form.reset();
+                const newsletter = document.querySelector('.newsletter-section');
+                const newsletterOverlay = document.querySelector('.newsletter-overlay');
+                setTimeout(() => {
+                    newsletter.classList.remove('in_modal');
+                    newsletterOverlay.classList.remove('active');
+                }, 3000);
+          } else if (res.status === 422) {
+            const data = await res.json().catch(() => ({}));
+            const err = (data.errors && data.errors.email && data.errors.email[0]) ? data.errors.email[0] : 'Невалидни данни.';
+            msg.innerHTML = '<div class="alert alert-danger" role="alert">' + err + '</div>';
+          } else {
+            msg.innerHTML = '<div class="alert alert-danger" role="alert">Възникна грешка. Опитайте пак!</div>';
+          }
+        } catch {
+          msg.innerHTML = '<div class="alert alert-danger" role="alert">Възникна грешка. Опитайте пак!</div>';
+        }
+      });
+    });
+</script>    <footer class="py-5 bg-dark text-white">
+    <div class="container">
+        <div class="row">
+            <div class="col-6 col-md-3 mb-3">
+                <a class="navbar-brand" href="https://egn.bg">
+                    <img src="images/logo-white.svg" alt="Egn.bg" style="max-width: 250px;" class="d-inline-block align-text-top">
+                </a>
+                <div>
+                    +359 42 919 715 <br>
+                    СТАТИК.БГ ЕООД<br>
+                    
+                    ЕИК: <strong>208203684</strong><br>
+                </div>
+            </div>
+
+            <div class="col-6 col-md-3 mb-3">
+                <h5>Полезни връзки</h5>
+                <ul class="nav flex-column">
+                    <li class="nav-item mb-2">
+                        <a class="nav-link p-0 text-white-50" href="https://egn.bg">Начало</a>
+                    </li>
+                    <li class="nav-item mb-2">
+                        <a class="nav-link p-0 text-white-50" href="https://egn.bg/history">История</a>
+                    </li>
+                    <li class="nav-item mb-2">
+                        <a class="nav-link p-0 text-white-50" href="https://egn.bg/blog">Блог</a>
+                    </li>
+                    <li class="nav-item mb-2">
+                        <a class="nav-link p-0 text-white-50" href="https://egn.bg/contacts">Контакти</a>
+                    </li>
+                    <li class="nav-item mb-2">
+                        <a class="nav-link p-0 text-white-50" href="https://egn.bg/pochivni-dni">Почивни дни</a>
+                    </li>
+                    <li class="nav-item mb-2">
+                        <a class="nav-link p-0 text-white-50" href="https://egn.bg/egn/statistika">Статистика</a>
+                    </li>
+                    <li class="nav-item mb-2">
+                        <a class="nav-link p-0 text-white-50" href="https://egn.bg/egn/api">API</a>
+                    </li>
+                    <li class="nav-item mb-2">
+                        <a class="nav-link p-0 text-white-50" href="https://egn.bg/lnch">Какво е ЛНЧ</a>
+                    </li>
+                    <li class="nav-item mb-2">
+                        <a class="nav-link p-0 text-white-50" href="https://egn.bg/egn/sled-2000">ЕГН след 2000</a>
+                    </li>
+                    <li class="nav-item mb-2">
+                        <a class="nav-link p-0 text-white-50" href="https://egn.bg/terms">Условия за ползване</a>
+                    </li>
+                    <li class="nav-item mb-2">
+                        <a class="nav-link p-0 text-white-50" href="https://egn.bg/privacy">Политика за поверителност</a>
+                    </li>
+      
+                </ul>
+            </div>
+            <div class="col-6 col-md-3 mb-3">
+                <h5>Региони</h5>
+                <ul class="nav flex-column">
+                                            <li class="nav-item mb-2">
+                            <a class="nav-link p-0 text-white-50" href="https://egn.bg/egn/region/blagoevgrad">Благоевград</a>
+                        </li>
+                                            <li class="nav-item mb-2">
+                            <a class="nav-link p-0 text-white-50" href="https://egn.bg/egn/region/burgas">Бургас</a>
+                        </li>
+                                            <li class="nav-item mb-2">
+                            <a class="nav-link p-0 text-white-50" href="https://egn.bg/egn/region/varna">Варна</a>
+                        </li>
+                                            <li class="nav-item mb-2">
+                            <a class="nav-link p-0 text-white-50" href="https://egn.bg/egn/region/veliko-tarnovo">Велико Търново</a>
+                        </li>
+                                            <li class="nav-item mb-2">
+                            <a class="nav-link p-0 text-white-50" href="https://egn.bg/egn/region/vidin">Видин</a>
+                        </li>
+                                            <li class="nav-item mb-2">
+                            <a class="nav-link p-0 text-white-50" href="https://egn.bg/egn/region/vratsa">Враца</a>
+                        </li>
+                                            <li class="nav-item mb-2">
+                            <a class="nav-link p-0 text-white-50" href="https://egn.bg/egn/region/gabrovo">Габрово</a>
+                        </li>
+                                            <li class="nav-item mb-2">
+                            <a class="nav-link p-0 text-white-50" href="https://egn.bg/egn/region/kardzhali">Кърджали</a>
+                        </li>
+                                            <li class="nav-item mb-2">
+                            <a class="nav-link p-0 text-white-50" href="https://egn.bg/egn/region/kyustendil">Кюстендил</a>
+                        </li>
+                                            <li class="nav-item mb-2">
+                            <a class="nav-link p-0 text-white-50" href="https://egn.bg/egn/region/lovech">Ловеч</a>
+                        </li>
+                                            <li class="nav-item mb-2">
+                            <a class="nav-link p-0 text-white-50" href="https://egn.bg/egn/region/montana">Монтана</a>
+                        </li>
+                                            <li class="nav-item mb-2">
+                            <a class="nav-link p-0 text-white-50" href="https://egn.bg/egn/region/pazardzhik">Пазарджик</a>
+                        </li>
+                                            <li class="nav-item mb-2">
+                            <a class="nav-link p-0 text-white-50" href="https://egn.bg/egn/region/pernik">Перник</a>
+                        </li>
+                                            <li class="nav-item mb-2">
+                            <a class="nav-link p-0 text-white-50" href="https://egn.bg/egn/region/pleven">Плевен</a>
+                        </li>
+                                    </ul>
+            </div>
+            <div class="col-6 col-md-3 mb-3">
+                <h5>Още региони</h5>
+                <ul class="nav flex-column">
+                                            <li class="nav-item mb-2">
+                            <a class="nav-link p-0 text-white-50" href="https://egn.bg/egn/region/plovdiv">Пловдив</a>
+                        </li>
+                                            <li class="nav-item mb-2">
+                            <a class="nav-link p-0 text-white-50" href="https://egn.bg/egn/region/razgrad">Разград</a>
+                        </li>
+                                            <li class="nav-item mb-2">
+                            <a class="nav-link p-0 text-white-50" href="https://egn.bg/egn/region/ruse">Русе</a>
+                        </li>
+                                            <li class="nav-item mb-2">
+                            <a class="nav-link p-0 text-white-50" href="https://egn.bg/egn/region/silistra">Силистра</a>
+                        </li>
+                                            <li class="nav-item mb-2">
+                            <a class="nav-link p-0 text-white-50" href="https://egn.bg/egn/region/sliven">Сливен</a>
+                        </li>
+                                            <li class="nav-item mb-2">
+                            <a class="nav-link p-0 text-white-50" href="https://egn.bg/egn/region/smolyan">Смолян</a>
+                        </li>
+                                            <li class="nav-item mb-2">
+                            <a class="nav-link p-0 text-white-50" href="https://egn.bg/egn/region/grad-sofiya">София - град</a>
+                        </li>
+                                            <li class="nav-item mb-2">
+                            <a class="nav-link p-0 text-white-50" href="https://egn.bg/egn/region/sofia">София - окръг</a>
+                        </li>
+                                            <li class="nav-item mb-2">
+                            <a class="nav-link p-0 text-white-50" href="https://egn.bg/egn/region/stara-zagora">Стара Загора</a>
+                        </li>
+                                            <li class="nav-item mb-2">
+                            <a class="nav-link p-0 text-white-50" href="https://egn.bg/egn/region/dobrich">Добрич (Толбухин)</a>
+                        </li>
+                                            <li class="nav-item mb-2">
+                            <a class="nav-link p-0 text-white-50" href="https://egn.bg/egn/region/targovishte">Търговище</a>
+                        </li>
+                                            <li class="nav-item mb-2">
+                            <a class="nav-link p-0 text-white-50" href="https://egn.bg/egn/region/haskovo">Хасково</a>
+                        </li>
+                                            <li class="nav-item mb-2">
+                            <a class="nav-link p-0 text-white-50" href="https://egn.bg/egn/region/shumen">Шумен</a>
+                        </li>
+                                            <li class="nav-item mb-2">
+                            <a class="nav-link p-0 text-white-50" href="https://egn.bg/egn/region/yambol">Ямбол</a>
+                        </li>
+                                    </ul>
+            </div>
+
+
+
+            <div class="col-md-12 mb-3">
+               <p>
+                    Този сайт предоставя инструменти за проверка, обучение и тестване, свързани с ЕГН. Въведените данни не се
+                    съхраняват, не
+                    се записват и не се използват за каквито и да е цели извън показването на резултатите. Сайтът не носи отговорност за
+                    начина, по който потребителите използват предоставените инструменти.
+                </p>
+            </div>
+        </div>
+ 
+    </div>
+    </footer>
+ 
+ 
+ 
+
+    
+    
+
+ 
+<script>
+            document.addEventListener('DOMContentLoaded', function () {
+            document.querySelectorAll('.got-new-test').forEach(function (btn) {
+                btn.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                const form = document.querySelector('form');
+                const input = document.getElementById('egn');
+
+                if (!form) return;
+                
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+
+
+                // малък delay за да не се бие със scroll-а
+                setTimeout(function () {
+                    if (input) {
+                    input.focus();
+                    input.value = '';
+                    }
+                }, 300);
+                });
+            });
+        });
+        function share() {
+            const url = window.location.href;
+            const encodedUrl = encodeURIComponent(url);
+
+            if (navigator.share) {
+                navigator.share({
+                title: 'Сподели това',
+                text: 'Провери линка:',
+                url: url
+                }).catch(console.error);
+            } else {
+                // fallback линкове
+                document.getElementById('fb').href = `https://www.facebook.com/sharer/sharer.php?u=${encodedUrl}`;
+                document.getElementById('viber').href = `viber://forward?text=${encodedUrl}`;
+                document.getElementById('whatsapp').href = `https://wa.me/?text=${encodedUrl}`;
+                document.getElementById('fallback').style.display = 'block';
+            }
+        }
+
+
+        function copyLink() {
+            navigator.clipboard.writeText(window.location.href).then(() => {
+                alert('Линкът е копиран!');
+            });    
+        }
+ 
+        // Real-time EGN validation (centralized) — use external file
+        function validateEgnClient(egn) {
+            // Call the explicit validator exposed by the external script to avoid recursion
+            if (window.isValidEgn && typeof window.isValidEgn === 'function') {
+                return window.isValidEgn(egn);
+            }
+            // fallback: in older setups an external validateEgnClient may exist under a different name
+            return false;
+        }
+
+        // Initialize EGN input validation on all EGN inputs
+        document.addEventListener('DOMContentLoaded', function() {
+            const egnInputs = document.querySelectorAll('input[name="egn"]');
+            
+            egnInputs.forEach(function(input) {
+                let validationTimeout;
+                // const loader = input.closest('.egn-loader');
+
+                const setTypingState = function(isTyping) {
+                    // if (!loader) return;
+                    // if (isTyping) {
+                    //     loader.classList.add('egn-typing');
+                    // } else {
+                    //     loader.classList.remove('egn-typing');
+                    // }
+                };
+                
+                // Add typing animation on focus
+                input.addEventListener('focus', function(e) {
+                    if (e.target.value.length < 10 && !e.target.classList.contains('egn-valid') && !e.target.classList.contains('egn-invalid')) {
+                        setTypingState(true);
+                    }
+                });
+                
+                // Remove typing animation on blur
+                input.addEventListener('blur', function() {
+                    setTypingState(false);
+                });
+                
+                input.addEventListener('input', function(e) {
+                    const value = e.target.value.trim();
+                    
+                    // Remove previous validation classes
+                    e.target.classList.remove('egn-valid', 'egn-invalid');
+                    
+                    // Add typing animation if not yet complete
+                    if (value.length < 10 && value.length > 0) {
+                        setTypingState(true);
+                    } else {
+                        setTypingState(false);
+                    }
+                    
+                    // Clear previous timeout
+                    if (validationTimeout) {
+                        clearTimeout(validationTimeout);
+                    }
+                    
+                    // Only validate when exactly 10 digits are entered
+                    if (value.length === 10) {
+                        setTypingState(false);
+
+                        // Quick client-side validation only (no backend call)
+                        const clientValid = validateEgnClient(value);
+                        if (clientValid) {
+                            e.target.classList.add('egn-valid');
+                        } else {
+                            e.target.classList.add('egn-invalid');
+                        }
+                    }
+                });
+            });
+        });
+    </script>
+    <script src="js/bootstrap.bundle.min.js">
+    </script>
+  
+    
+
+
+</body></html>
